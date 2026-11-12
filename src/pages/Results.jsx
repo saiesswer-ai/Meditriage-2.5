@@ -25,7 +25,7 @@ export default function Results() {
   const [gaugeAnim, setGaugeAnim] = useState(0);
 
   useEffect(() => {
-    if (!patientData) navigate('/triage');
+    if (!patientData) navigate('/chatbot');
   }, [patientData, navigate]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function Results() {
         <div className="error-card glass">
           <AlertTriangle size={48} color="var(--high)" />
           <h2>No completed assessment is available yet.</h2>
-          <button className="submit-btn" onClick={() => navigate('/triage')}>Return to intake form</button>
+          <button className="submit-btn" onClick={() => navigate('/chatbot')}>Start an assessment</button>
         </div>
       </div>
     );

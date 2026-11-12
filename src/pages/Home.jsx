@@ -19,8 +19,8 @@ export default function Home() {
         <div className="hero-content">
           <h1 className="hero-title">{t('heroTitle')}</h1>
           <p className="hero-subtext">{t('heroSubtext')}</p>
-          <button className="hero-cta" onClick={() => navigate('/triage')}>
-            {t('startTriage')}
+          <button className="hero-cta" onClick={() => navigate('/chatbot')}>
+            {t('startChat')}
           </button>
         </div>
 

@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
-import Triage from './pages/Triage';
 import Results from './pages/Results';
 import Dashboard from './pages/Dashboard';
 import Navigation from './pages/Navigation';
@@ -15,7 +14,6 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/triage" element={<Triage />} />
           <Route path="/results" element={<Results />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/navigation" element={<Navigation />} />

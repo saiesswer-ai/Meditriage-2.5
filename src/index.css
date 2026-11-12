@@ -545,15 +545,7 @@ a {
   background: var(--glass-border);
 }
 
-/* ═══════════════════════════════════
-   TRIAGE PAGE
-   ═══════════════════════════════════ */
-
-.triage-page {
-  max-width: 620px;
-  margin: 0 auto;
-  padding-bottom: 40px;
-}
+/* ── Shared Form Controls ── */
 
 .intake-card {
   border-radius: 20px;
@@ -2546,6 +2538,20 @@ a {
   gap: 16px;
 }
 
+.chat-intake-card {
+  align-self: flex-start;
+  width: min(100%, 520px);
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.chat-intake-card h3 { margin-bottom: 16px; color: var(--accent); font-size: 1rem; }
+.chat-intake-card .form-group { margin-bottom: 13px; }
+.chat-intake-card .form-group input { width: 100%; padding: 10px 12px; border: 1px solid rgba(100, 116, 139, .25); border-radius: 10px; background: rgba(10, 15, 30, .6); color: var(--text); font: inherit; outline: none; }
+.field-error, .chat-voice-error { display: block; margin-top: 5px; color: #ff6472; font-size: .78rem; }
+.chat-intake-continue { width: 100%; padding: 11px; border: 0; border-radius: 10px; background: linear-gradient(135deg, var(--accent), #00f5c4); color: var(--bg); font: 700 .9rem var(--font-heading); cursor: pointer; }
+.chat-intake-continue:disabled { opacity: .45; cursor: not-allowed; }
+
 .chat-bubble {
   display: flex;
   gap: 10px;
@@ -2654,6 +2660,11 @@ a {
   color: var(--text);
   margin: 0;
 }
+
+.diagnosis-patient-details { display: grid; grid-template-columns: 1fr 1fr; gap: 9px 16px; padding: 0 0 16px; border-bottom: 1px solid rgba(100, 116, 139, .15); }
+.diagnosis-patient-details div { min-width: 0; display: flex; flex-direction: column; }
+.diagnosis-patient-details small { color: var(--muted); font-size: .68rem; text-transform: uppercase; letter-spacing: .04em; }
+.diagnosis-patient-details span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--text); font-size: .88rem; font-weight: 400; }
 
 .diagnosis-main {
   text-align: center;
@@ -2813,6 +2824,17 @@ a {
   max-height: 120px;
   min-height: 24px;
 }
+
+.chatbot-icon-btn { width: 38px; height: 38px; flex-shrink: 0; display: grid; place-items: center; border: 0; border-radius: 10px; background: transparent; color: var(--muted); cursor: pointer; }
+.chatbot-icon-btn:hover:not(:disabled) { color: var(--accent); background: rgba(0, 212, 170, .1); }
+.chatbot-icon-btn:disabled { opacity: .4; cursor: not-allowed; }
+.chatbot-icon-btn.listening { color: var(--accent); animation: pulse 1.2s ease-in-out infinite; }
+.image-file-input { display: none; }
+.image-chip { display: flex; align-items: center; gap: 8px; width: fit-content; max-width: 100%; margin: 0 0 8px; padding: 5px 8px; border-radius: 10px; background: rgba(0, 212, 170, .08); font-size: .78rem; }
+.image-chip img { width: 28px; height: 28px; border-radius: 5px; object-fit: cover; }
+.image-chip span { max-width: 140px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.image-chip button { display: grid; place-items: center; border: 0; background: transparent; color: var(--muted); cursor: pointer; }
+.image-chip em { color: var(--muted); font-style: normal; }
 
 .chatbot-input-wrapper textarea::placeholder {
   color: var(--muted);
